@@ -1,9 +1,9 @@
-/Author: Song Zhirui zjs5301@psu.edu
-/Collaborator: Jack Hillman jsh5719@psu.edu
-/Collaborator:  Shrey Hillman sxs6588@psu.edu
-/Collaborator: Alexandros Condeelis afc5865@psu.edu
-/Section: 5
-/Breakout Room: 2
+// Author: Song Zhirui zjs5301@psu.edu
+// Collaborator: Jack Hillman jsh5719@psu.edu
+// Collaborator:  Shrey Hillman sxs6588@psu.edu
+// Collaborator: Alexandros Condeelis afc5865@psu.edu
+// Section: 5
+// Breakout Room: 2
 
 #include <stdio.h>
 #include <readline/readline.h>
