@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int sum_n(int n) {
   if (!n) return 0;
@@ -13,13 +14,13 @@ void print_n(const char *s, int n) {
 
 int main() {
   int n;
-  char s[100];
+  char s[1000];
   printf("Enter an int: ");
   scanf("%d", &n);
   printf("sum is %d.\n", sum_n(n));
   printf("Enter a string: ");
   getchar();
-  gets(s);
+  fgets(s, 999, stdin);
   print_n(s, n);
   return 0;
 }
