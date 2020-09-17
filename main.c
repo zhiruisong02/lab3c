@@ -13,14 +13,19 @@ void print_n(const char *s, int n) {
 }
 
 int main() {
-  int n;
+  int n, l;
   char s[1000];
   printf("Enter an int: ");
   scanf("%d", &n);
-  printf("%d\n", sum_n(n));
+  printf("%d\n", n);
+  printf("sum is %d.\n", sum_n(n));
   printf("Enter a string: ");
   getchar();
   fgets(s, 999, stdin);
+  l = strlen(s);
+  if (s[l - 1] == '\r' || s[l - 1] == '\n')s[--l] = 0;
+  if (s[l - 1] == '\r' || s[l - 1] == '\n')s[--l] = 0;
+  printf("%s\n", s);
   print_n(s, n);
   return 0;
 }
