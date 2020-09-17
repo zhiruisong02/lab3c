@@ -1,31 +1,26 @@
 #include <stdio.h>
-#include <string.h>
+#include <readline/readline.h>
+#include <stdlib.h>
 
-int sum_n(int n) {
-  if (!n) return 0;
-  return n + sum_n(n - 1);
+int sum_n(int n){
+  if (n == 0){
+    return 0;
+  }
+    else{
+      return n + sum_n(n-1)
+    }
+}
+void print_n(const char *s, int n){
+  if (n != 0){
+    printf("%s\n",s);
+    print_n(s, n-1);
+  }
 }
 
-void print_n(const char *s, int n) {
-  if (!n) return ;
-  printf("%s\n", s);
-  print_n(s, n - 1);
-}
-
-int main() {
-  int n, l;
-  char s[1000];
-  printf("Enter an int: ");
-  scanf("%d", &n);
-  printf("%d\n", n);
-  printf("sum is %d.\n", sum_n(n));
-  printf("Enter a string: ");
-  getchar();
-  fgets(s, 999, stdin);
-  l = strlen(s);
-  if (s[l - 1] == '\r' || s[l - 1] == '\n')s[--l] = 0;
-  if (s[l - 1] == '\r' || s[l - 1] == '\n')s[--l] = 0;
-  printf("%s\n", s);
-  print_n(s, n);
+int main(void){
+  int number = atoi(readline("Enter an int: "));
+  printf("sum is %d.\n",sum_n(number));
+  char *string = readline("Enter a string: ");
+  print_n(string,number);
   return 0;
 }
