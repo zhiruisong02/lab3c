@@ -17,7 +17,7 @@ int main() {
   char s[1000];
   printf("Enter an int: ");
   scanf("%d", &n);
-  printf("sum is %d.\n", sum_n(n));
+  printf("%d\n", sum_n(n));
   printf("Enter a string: ");
   getchar();
   fgets(s, 999, stdin);
